@@ -5,7 +5,7 @@ namespace: mlflow-demo
 
 bases:
   - ../../../tenants/mlflow-demo/argocd/projects/overlays/default
-  - ../../../tenants/mlflow-demo/argocd/apps/app-of-apps/overlays/default
+  - ../../../tenants/mlflow-demo/argocd/apps/overlays/default
   # - ../../../tenants/mlflow-demo/argocd/applicationsets/overlays/default
 
 patches:
