@@ -2,12 +2,11 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: mlflow-demo-app-of-aps
-  namespace: openshift-gitops
 spec:
   destination:
-    namespace: openshift-gitops
+    namespace: mlflow-demo-gitops
     server: https://kubernetes.default.svc
-  project: mlflow-demo
+  project: default
   source:
     path: clusters/mlflow-demo/argocd
     repoURL: https://github.com/strangiato/mlflow-demo-apps.git
