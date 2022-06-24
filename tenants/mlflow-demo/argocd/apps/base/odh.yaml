@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: odh-2
+  namespace: mlflow-demo-gitops
+spec:
+  destination:
+    namespace: odh-test-2
+    server: 'https://kubernetes.default.svc'
+  project: mlflow-demo
+  source:
+    chart: odh
+    repoURL: 'https://strangiato.github.io/helm-charts/'
+    targetRevision: 0.2.1

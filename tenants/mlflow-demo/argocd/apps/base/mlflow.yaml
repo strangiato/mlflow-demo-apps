@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mlflow
+  namespace: mlflow-demo-gitops
+spec:
+  destination:
+    namespace: mlflow-demo
+    server: 'https://kubernetes.default.svc'
+  project: mlflow-demo
+  source:
+    chart: mlflow-server
+    repoURL: 'https://strangiato.github.io/helm-charts/'
+    targetRevision: 0.2.1
+    helm:
+      parameters:
+        - name: fullnameOverride
+          value: mlflow-server
