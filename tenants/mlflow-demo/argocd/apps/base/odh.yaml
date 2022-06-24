@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: odh-2
+  name: odh
   namespace: mlflow-demo-gitops
 spec:
   destination:
-    namespace: odh-test-2
+    namespace: mlflow-demo
     server: 'https://kubernetes.default.svc'
   project: mlflow-demo
   source:
