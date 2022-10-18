@@ -9,7 +9,7 @@ oc whoami
 echo ""
 echo "Installing tenant components."
 
-kustomize build bootstrap/overlays/default | oc apply -f -
+oc apply -k bootstrap/overlays/default
 
 echo ""
 echo "View the status of the sync in the ArgoCD Instance:"
