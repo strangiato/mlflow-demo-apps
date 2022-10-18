@@ -11,7 +11,7 @@ spec:
   source:
     chart: mlflow-server
     repoURL: 'https://strangiato.github.io/helm-charts/'
-    targetRevision: 0.5.3
+    targetRevision: 0.5.4
     helm:
       parameters:
         - name: fullnameOverride
